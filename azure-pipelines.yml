@@ -20,6 +20,8 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
+- script: mocha test --reporter mocha-junit-reporter
+
 - task: CopyFiles@2
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)'
